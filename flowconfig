@@ -4,13 +4,15 @@
 .*/build/.*
 .*/examples/.*
 .*/benchmarks/.*
+.*/ct-flow-typed/.*
 
 [include]
-static-builder/.*
+.*/ct-flow-typed/includes
 
 [libs]
 flow
 flow-typed
+ct-flow-typed/defs
 
 [options]
 
