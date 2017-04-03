@@ -3246,5 +3246,4 @@ declare module 'jquery' {
   declare var exports: JQueryStatic;
 }
 declare var jQuery: JQueryStatic;
-declare var $: JQueryStatic;
 
