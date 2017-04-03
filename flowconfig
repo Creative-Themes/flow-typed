@@ -4,10 +4,9 @@
 .*/build/.*
 .*/examples/.*
 .*/benchmarks/.*
-.*/ct-flow-typed/.*
+.*/ct-flow-typed/defs/.*
 
 [include]
-.*/ct-flow-typed/includes
 
 [libs]
 flow
