@@ -24,7 +24,7 @@ declare type FwEventBox = {
 	debug(enabled: boolean): FwEventBox,
 	on(message: FwEventMapOrName, callback: ?Function, context: ?Object): FwEventBox,
 	one(message: FwEventMapOrName, callback: ?Function, context: ?Object): FwEventBox,
-	off(message: FwEventMapOrName, callback: ?Function): FwEventBox,
+	off(message: FwEventMapOrName, callback: ?Function, context: ?Object): FwEventBox,
 	trigger(message: FwEventMapOrName, data: FwEventPayload): FwEventBox,
 	hasListeners(message: FwEventName): boolean
 };
