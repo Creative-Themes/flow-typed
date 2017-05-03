@@ -6,10 +6,7 @@ declare type FwEventMap = {
 	[eventName: FwEventName]: Function
 };
 
-declare type FwPrivateEventElement = {
-	context: ?Object,
-	listener: ?Function
-};
+declare type FwPrivateEventElement = Function;
 
 declare type FwPrivateEventBox = {
 	[eventName: FwEventName]: FwPrivateEventElement[]
@@ -22,9 +19,9 @@ declare type FwEventPayload = mixed;
 declare type FwEventBox = {
 	log(message: string, data: FwEventPayload): void,
 	debug(enabled: boolean): FwEventBox,
-	on(message: FwEventMapOrName, callback: ?Function, context: ?Object): FwEventBox,
-	one(message: FwEventMapOrName, callback: ?Function, context: ?Object): FwEventBox,
-	off(message: FwEventMapOrName, callback: ?Function, context: ?Object): FwEventBox,
+	on(message: FwEventMapOrName, callback: ?Function): FwEventBox,
+	one(message: FwEventMapOrName, callback: ?Function): FwEventBox,
+	off(message: FwEventMapOrName, callback: ?Function): FwEventBox,
 	trigger(message: FwEventMapOrName, data: FwEventPayload): FwEventBox,
 	hasListeners(message: FwEventName): boolean
 };
